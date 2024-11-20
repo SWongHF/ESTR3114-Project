@@ -382,10 +382,10 @@ Hence, \[\sum\limits_{t=1}^T (f_t(\textbf{w}_t)-f_t(\textbf{w}_{t+1}))\leq (2L)^
 \subsection{Proof of Theorem 3.5}
 {\it Proof of Theorem 3.5.} In each round $t$, there exists a subgradient $\textbf{z}_t$ such that for all $\textbf{u}$, $f_t(\textbf{w}_t)-f_t(\textbf{u})\leq \langle \textbf{w}_t-\textbf{u}, \textbf{z}_t\rangle$.
 Hence, \[\sum\limits_{t=1}^T (f_t(\textbf{w}_t)-f_t(\textbf{u}))\leq \sum\limits_{t=1}^T (\langle \textbf{w}_t, \textbf{z}_t\rangle-\langle \textbf{u}, \textbf{z}_t\rangle).\]
-Also, \[\begin{aligned}\text{Regret}_T(\textbf{u})&\leq R(\textbf{u})-R(\textbf{w}_1)+\sum\limits_{t=1}^T (f_t(\textbf{w}_t)-f_t(\textbf{w}_{t+1}))\\&\leq \frac{1}{2\eta}\lVert \textbf{u}\rVert_2^2+\sum\limits_{t=1}^T\langle \textbf{w}_t-\textbf{w}_{t+1}, \textbf{z}_t\rangle=\frac{1}{2\eta}\lVert \textbf{u}\rVert_2^2+\eta \sum\limits_{t=1}^T\lVert \textbf{z}_t\rVert_2^2.\end{aligned}\] Since $f_t$ is Lipschitz, the term $\sum_{t=1}^T \lVert \textbf{z}_t\rVert_2^2$ can be bounded by $\sum_{t=1}^T L_t^2\leq L$, concluding the proof.\qed
+Also, \[\begin{aligned}\text{Regret}_T(\textbf{u})&\leq R(\textbf{u})-R(\textbf{w}_1)+\sum\limits_{t=1}^T (f_t(\textbf{w}_t)-f_t(\textbf{w}_{t+1}))\\&\leq \frac{1}{2\eta}\lVert \textbf{u}\rVert_2^2+\sum\limits_{t=1}^T\langle \textbf{w}_t-\textbf{w}_{t+1}, \textbf{z}_t\rangle=\frac{1}{2\eta}\lVert \textbf{u}\rVert_2^2+\eta \sum\limits_{t=1}^T\lVert \textbf{z}_t\rVert_2^2.\end{aligned}\] Since $f_t$ is Lipschitz, the term $\sum_{t=1}^T \lVert \textbf{z}_t\rVert_2^2$ can be bounded by $\sum_{t=1}^T L_t^2\leq L$, concluding the proof.\\\qed
 
 
 \subsection{Proof of Theorem 3.6}
-{\it Proof of Theorem 3.6.} As shown previously, $f_t(\textbf{w}_t)-f_t(\textbf{u})\leq \langle \textbf{w}_t-\textbf{u}, \textbf{z}_t\rangle$. Observing that OMD is equivalent to running FTRL on the sequence of linear functions with the regularization $R(\textbf{w})$ follows the theorem.\qed
+{\it Proof of Theorem 3.6.} As shown previously, $f_t(\textbf{w}_t)-f_t(\textbf{u})\leq \langle \textbf{w}_t-\textbf{u}, \textbf{z}_t\rangle$. Since OMD is equivalent to running FTRL on the sequence of linear functions with the regularization $R(\textbf{w})$, it immediately follows the theorem.\qed
 
 \end{document}
