@@ -286,10 +286,10 @@ Second, we can see that the regret's growth is limited under a line (shown in Fi
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\linewidth]{../loss.png}
-  \includegraphics[width=0.6\linewidth]{../regret.png}
+  \includegraphics[width=0.48\linewidth]{../LossAvgF.png}
+  \includegraphics[width=0.48\linewidth]{../regretAvgF.png}
 
-  \caption{Performance of various algorithms in the email classfication tasks, illustrating the averaged cumulative loss for each round (upper panel) and the cumulative regret till round $t$ (lower panel).}
+  \caption{Performance of various algorithms in the email classfication tasks, illustrating the averaged cumulative loss for each round (left panel) and the cumulative regret till round $t$ (right panel).}
 \end{figure}
 
 Thirdly, it is also surprising that FTL has outperformed both FTRL and OGD (see Table 1). This is due to the aggressive nature of FTL, we can see that the regret per round of FTL surged up to $1.2$, which is vulnerable to attacks. We suspect that the dataset is lenient to FTL as the algorithm tunes the model without being tricked, which helps it achieve a better result by taking larger steps for updates, and eventually, converges to the optimal point.
@@ -302,7 +302,7 @@ Thirdly, it is also surprising that FTL has outperformed both FTRL and OGD (see 
     \toprule
     \textbf{Methods}  & \textbf{FTL}        & \textbf{FTRL}      & \textbf{OGD}      \\ \midrule
     Avg. mistakes     & $1,074.20\pm37.42$  & $1,814.70\pm 3.16$ & $1,818.80\pm42.1$ \\
-    Cumulative Regret & $-1,122.78\pm62.53$ & $100.76\pm 0.86$   & $113.48\pm6.50$   \\
+    Cumulative regret & $-1,122.78\pm62.53$ & $100.76\pm 0.86$   & $113.48\pm6.50$   \\
     \bottomrule
   \end{tabular}
 
